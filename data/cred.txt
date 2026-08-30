@@ -1,5 +1,5 @@
-STORAGE_AWS_IAM_USER_ARN - arn:aws:iam::132425676589:user/zee22000-s
-STORAGE_AWS_EXTERNAL_ID - NK49173_SFCRole=4_P4ZY6G2OWD2rv/M5DhIMAnNjH0s=
+STORAGE_AWS_IAM_USER_ARN -
+STORAGE_AWS_EXTERNAL_ID - 
+account-identifier - 
+user-name -
 
-account-identifier - EAXVPCC-CQ10085
-user-name - HEMA5187
