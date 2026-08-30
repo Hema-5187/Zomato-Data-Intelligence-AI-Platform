@@ -1,0 +1,160 @@
+# =========================================================
+# Python
+# =========================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python packaging
+*.egg
+*.egg-info/
+dist/
+build/
+wheels/
+
+# =========================================================
+# Environment / Secrets
+# =========================================================
+
+.env
+.env.*
+!.env.example
+
+# dbt credentials
+profiles.yml
+zomato/profiles.yml
+
+# Certificates / private keys
+*.pem
+*.key
+*.crt
+
+# =========================================================
+# Jupyter
+# =========================================================
+
+.ipynb_checkpoints/
+
+# =========================================================
+# VS Code / IDE
+# =========================================================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================================================
+# Streamlit
+# =========================================================
+
+.streamlit/secrets.toml
+
+# Local Streamlit / application cache
+.streamlit/cache/
+
+# =========================================================
+# RAG / AI generated local files
+# =========================================================
+
+*.parquet
+*.pkl
+*.pickle
+*.joblib
+
+# Local embedding cache
+ai/review_embeddings.parquet
+
+# =========================================================
+# Ollama
+# =========================================================
+
+# Ollama models should NOT be stored in the project
+# They are stored separately on the local machine.
+
+# =========================================================
+# Airflow
+# =========================================================
+
+airflow/logs/
+airflow/.env
+
+# Airflow generated files
+airflow/__pycache__/
+airflow/dags/__pycache__/
+
+# Airflow local metadata / temporary files
+airflow/.airflowignore
+
+# =========================================================
+# dbt
+# =========================================================
+
+# dbt generated artifacts
+zomato/target/
+zomato/logs/
+
+# dbt local state
+zomato/.user.yml
+
+# =========================================================
+# Data
+# =========================================================
+
+# Ignore raw/local datasets
+data/*.csv
+data/*.xlsx
+data/*.xls
+data/*.parquet
+
+# Keep the data directory structure in Git
+!data/.gitkeep
+
+# =========================================================
+# Logs
+# =========================================================
+
+*.log
+logs/
+
+# =========================================================
+# OS generated files
+# =========================================================
+
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# =========================================================
+# Temporary files
+# =========================================================
+
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# =========================================================
+# Build / generated files
+# =========================================================
+
+*.cache
+.cache/
+tmp/
+temp/
