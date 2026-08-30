@@ -84,6 +84,8 @@ Snowflake for downstream processing.
 
 ![AWS S3 Data Storage](images/AwsData.png)
 
+Note: Use the tutorial link given below for the AWS if you are new to this.
+
 ### Snowflake Data Warehouse
 
 After ingestion, the data is organized into logical layers within Snowflake:
