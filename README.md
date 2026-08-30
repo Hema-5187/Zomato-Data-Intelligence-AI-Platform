@@ -56,14 +56,58 @@ AI Analytics
 
 ---
 
-### ☁️ Data Engineering
+## ☁️ Data Engineering
 
-- AWS S3 for data storage
-- Snowflake as the cloud data warehouse
-- Raw, staging, AI, and marts layers
-- SQL-based transformations
-- Incremental data processing
-- Data quality testing with dbt
+The project uses **AWS S3** as the initial cloud storage and ingestion layer before
+loading the Zomato datasets into **Snowflake** for transformation, modeling, and analytics.
+
+### Data Flow
+
+```text
+Source Data
+    ↓
+AWS S3
+    ↓
+Snowflake RAW
+    ↓
+dbt Staging
+    ↓
+dbt Core
+    ↓
+Analytics Marts
+```
+
+### AWS S3 — Data Storage
+
+The raw Zomato datasets are stored in an AWS S3 bucket before being loaded into
+Snowflake for downstream processing.
+
+![AWS S3 Data Storage](images/AwsData.png)
+
+### Snowflake Data Warehouse
+
+After ingestion, the data is organized into logical layers within Snowflake:
+
+```text
+ZOMATO
+│
+├── RAW
+│   └── Raw source tables
+│
+├── STAGING
+│   └── Cleaned and standardized data
+│
+├── AI
+│   └── AI-enriched customer reviews
+│
+└── MARTS
+    └── Business-ready analytical models
+```
+
+![Customer Data in Snowflake](images/CustomerTable.png)
+
+This layered architecture separates **raw data, transformation logic, AI enrichment,
+and analytical datasets**, making the pipeline easier to maintain and extend.
 
 ---
 
